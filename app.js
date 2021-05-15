@@ -3,6 +3,7 @@ const { chromium } = require('playwright');
 
 const { inquirerInit, readInput, pause, } = require('./helpers/inquirer.helpers');
 const { findByAttr, findByText } = require('./helpers/find.helpers');
+
 require('colors');
 
 
@@ -34,7 +35,6 @@ const main = async () => {
             console.log('Good bye!'.red);
             process.exit(0);
         }
-
 
         const { page, context } = await createPage();
         const url = 'https://web.gencat.cat/ca/inici';
